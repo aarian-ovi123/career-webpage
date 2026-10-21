@@ -1,0 +1,366 @@
+/* Universal selector to apply box-sizing to all elements and their pseudo-elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* Ensures padding and border are included in element's total width/height */
+}
+
+/* Basic styles for the html and body elements */
+body,
+html {
+  margin: 0; /* Removes default margin */
+  padding: 0; /* Removes default padding */
+  box-sizing: border-box; /* Inherits box-sizing from universal selector */
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif; /* Sets default font family */
+  overflow-x: visible; /* Prevents horizontal scrolling */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+}
+
+/* Adds padding to top of the content for jobinfo page */
+.jobinfo-page {
+  padding-top: 60px; /* Adds spacing to avoid overlapping with navbar */
+}
+
+/* Container class for centering and adding padding to the main content */
+.container {
+  padding: 40px; /* Inner spacing */
+  margin: 0 auto; /* Centers the container horizontally */
+  max-width: 1200px; /* Maximum width */
+  background-color: white; /* White background */
+}
+
+/* Style for h3 headings */
+h3 {
+  margin-top: 30px; /* Space above heading */
+  margin-bottom: 15px; /* Space below heading */
+  font-size: 24px; /* Font size */
+  padding-left: 10px; /* Padding on the left */
+}
+
+/* Paragraph styles */
+p {
+  padding-left: 10px; /* Left padding */
+  padding-right: 10px; /* Right padding */
+  line-height: 1.6; /* Line spacing for better readability */
+}
+
+/* Styles for the index page background */
+.index-page {
+  background-image: url("Index.png"); /* Background image */
+  background-size: cover; /* Scales image to cover the entire element */
+  background-position: center; /* Centers image */
+  background-attachment: fixed; /* Fixes background during scrolling */
+  padding: 20px; /* Adds padding around the content */
+  padding-top: 80px; /* Extra top padding */
+}
+
+/* Styles for the box containing the title and articles */
+.box-title,
+.articles-container article {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Semi-transparent white background */
+  border: 5px solid black; /* Black border */
+  padding: 20px; /* Inner padding */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+/* Sticky navbar to remain fixed at the top */
+.sticky-navbar {
+  top: 0; /* Sticks to the top */
+  z-index: 9999; /* Ensures it appears above other elements */
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+  display: flex; /* Flexbox layout */
+  justify-content: center; /* Centers nav links */
+  padding: 0; /* No padding */
+  width: 100vw; /* Full width of viewport */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow below the navbar */
+}
+
+/* Non-sticky navbar for sections that don't require fixed positioning */
+.non-sticky-navbar {
+  position: relative; /* Normal flow positioning */
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+  display: flex; /* Flexbox layout */
+  justify-content: center; /* Center links */
+  align-items: center; /* Center items vertically */
+  padding: 10px 0; /* Vertical padding */
+}
+
+/* General navbar styles */
+nav {
+  background-color: #333; /* Dark background */
+  position: fixed; /* Stays fixed at the top */
+  top: 0; /* Positioned at the top */
+  left: 0; /* Positioned to the left */
+  width: 100vw; /* Full viewport width */
+  z-index: 1000; /* High stacking order */
+}
+
+/* Navbar list styles */
+.navbar {
+  display: flex; /* Flexbox layout */
+  justify-content: center; /* Centers list items */
+  list-style-type: none; /* Removes bullet points */
+  margin: 0; /* Removes margin */
+  padding: 0; /* Removes padding */
+  gap: 20px; /* Space between list items */
+}
+
+/* Navbar list item styles */
+.navbar li {
+  flex-grow: 0; /* Prevents items from growing */
+}
+
+/* Navbar links */
+.navbar a {
+  display: block; /* Makes the link a block-level element */
+  width: 100%; /* Full width */
+  text-decoration: none; /* Removes underline */
+  color: white; /* White text color */
+  font-size: 18px; /* Font size */
+  font-weight: 500; /* Font weight */
+  padding: 15px 25px; /* Padding around the text */
+  background-color: #333; /* Dark background */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+/* Hover effect for navbar links */
+.navbar a:hover {
+  text-decoration: underline; /* Adds underline on hover */
+  background-color: green; /* Changes background color */
+}
+
+/* Parallax section for background effects */
+.parallax-section {
+  position: relative; /* Positions relative to its normal position */
+  height: 100vh; /* Full viewport height */
+  background-size: cover; /* Covers entire element */
+  background-position: center; /* Centers background image */
+  background-attachment: fixed; /* Fixes background */
+  color: white; /* White text color */
+  display: flex; /* Flexbox layout */
+  align-items: center; /* Centers vertically */
+  justify-content: center; /* Centers horizontally */
+}
+
+/* Content inside the parallax section */
+.parallax-section .content {
+  z-index: 2; /* Brings content above background */
+  max-width: 90%; /* Max width */
+  padding: 20px; /* Padding */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Parallax section heading styles */
+.parallax-section h2 {
+  font-size: 2.5em; /* Sets a large font size for the heading */
+  margin-bottom: 20px; /* Adds space below the heading */
+}
+
+/* Parallax section unordered list styles */
+.parallax-section ul {
+  font-size: 1.2em; /* Increases font size for better readability */
+  list-style-position: inside; /* Moves the bullet point inside the content box */
+}
+
+/* List items inside the parallax section */
+.parallax-section ul li {
+  margin: 10px 0; /* Adds vertical spacing between list items */
+}
+
+/* General content block styles */
+.content {
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow to the text */
+  color: white; /* Sets text color to white */
+  padding: 30px; /* Adds inner spacing */
+  width: 60%; /* Sets content width */
+  max-width: 800px; /* Limits the width to 800px */
+  border-radius: 10px; /* Rounds the corners */
+  text-align: center; /* Centers the text */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow around the box */
+}
+
+/* Heading inside content block */
+.content h2 {
+  font-size: 2.5em; /* Sets a large font size */
+  margin-bottom: 15px; /* Adds space below the heading */
+}
+
+/* Paragraph inside content block */
+.content p {
+  font-size: 1.2em; /* Increases font size for readability */
+  line-height: 1.6; /* Adjusts line spacing for better readability */
+}
+
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+  .content {
+    width: 80%; /* Increases width for smaller screens */
+  }
+
+  .content h2 {
+    font-size: 2em; /* Reduces heading size for smaller screens */
+  }
+
+  .content p {
+    font-size: 1em; /* Reduces paragraph font size for smaller screens */
+  }
+}
+
+/* Styles for anchor links */
+a {
+  background-color: #000; /* Sets background color to black */
+  font-size: 20px; /* Sets font size */
+  border-radius: 10px; /* Rounds the corners */
+  padding: 10px; /* Adds inner spacing */
+  display: block; /* Makes the link a block element */
+  text-align: center; /* Centers the text */
+  margin: 10px; /* Adds margin around the link */
+  color: whitesmoke; /* Sets text color */
+  text-decoration: none; /* Removes underline from the link */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow around the link */
+  transition: transform 0.5s ease; /* Smooth scale effect on hover */
+}
+
+/* Hover effect for anchor links */
+a:hover {
+  color: white; /* Sets text color to white */
+  background-color: green; /* Changes background color */
+  transform: scale(1.05); /* Scales the link slightly */
+}
+
+/* Box title styles */
+.box-title {
+  border: 10px solid black; /* Adds a thick black border */
+  padding: 10px 20px; /* Adds inner spacing */
+  margin: 30px; /* Adds margin around the box */
+  border-radius: 15px; /* Rounds the corners */
+  font-size: 25px; /* Sets font size */
+  text-align: center; /* Centers the text */
+}
+
+/* Styles for article elements */
+article {
+  margin: 20px 0; /* Adds vertical margin */
+  padding: 20px; /* Adds inner spacing */
+  border: 5px solid #000; /* Adds a black border */
+  border-radius: 10px; /* Rounds the corners */
+}
+
+/* General heading styles */
+h2 {
+  font-size: 4ch; /* Sets font size relative to character width */
+  text-align: center; /* Centers the heading */
+}
+
+/* Container for multiple articles */
+.articles-container {
+  display: grid; /* Uses grid layout */
+  grid-template-columns: 1fr 1fr; /* Creates two equal columns */
+  grid-gap: 20px; /* Adds space between grid items */
+  justify-items: center; /* Centers grid items horizontally */
+}
+
+/* Paragraph styles */
+p {
+  font-size: 2ch; /* Sets font size relative to character width */
+}
+
+/* Table styles */
+table {
+  width: 100%; /* Full width table */
+  border-collapse: collapse; /* Removes space between table borders */
+  margin: 20px 0; /* Adds vertical margin */
+}
+
+/* Styles for table headers and cells */
+table th,
+table td {
+  padding: 10px; /* Adds padding */
+  text-align: left; /* Aligns text to the left */
+  border: 1px solid #DDD; /* Adds light gray border */
+}
+
+/* Table header and cell font sizes */
+th,
+td {
+  font-size: 20px; /* Sets font size */
+  padding-right: 150px; /* Adds extra padding on the right */
+}
+
+/* List styles */
+ul {
+  padding-left: 40px; /* Adds padding to the left */
+  list-style-type: disc; /* Uses disc as bullet points */
+  margin-left: 20px; /* Adds left margin */
+  font-size: 16px; /* Sets font size */
+}
+
+/* Ordered list styles */
+ol {
+  list-style-type: decimal; /* Uses numbers for list items */
+  margin-left: 40px; /* Adds left margin */
+  padding: 10px 0 10px 20px; /* Adds padding inside the list */
+  background-color: #F4F4F4; /* Light gray background */
+  font-size: 18px; /* Sets font size */
+  line-height: 1.6; /* Adjusts line spacing */
+}
+
+/* Hover effect for ordered lists (remains unchanged) */
+ol:hover {
+  background-color: transparent; /* Removes background color */
+  cursor: default; /* No change to cursor */
+}
+
+/* Nested unordered lists inside ordered lists */
+ol li ul {
+  list-style-type: disc; /* Uses disc bullet points */
+  margin-left: 40px; /* Adds left margin */
+  font-size: 14px; /* Sets smaller font size */
+}
+
+/* List items in nested lists */
+ol li ul li {
+  margin-bottom: 5px; /* Adds space below each item */
+  font-size: 14px; /* Smaller font size */
+  font-weight: normal; /* Normal font weight */
+}
+
+/* General list item styles */
+ul li,
+ol li {
+  margin-bottom: 10px; /* Adds space below list items */
+  line-height: 1.5; /* Adjusts line spacing */
+}
+
+/* Footer attribution styles */
+.attribution {
+  font-size: 0.9em; /* Sets smaller font size */
+  color: rgba(255, 255, 255, 0.7); /* Light gray color */
+  text-align: right; /* Aligns text to the right */
+  margin-top: 10px; /* Adds top margin */
+  font-style: italic; /* Italic text */
+  position: absolute; /* Absolute positioning */
+  bottom: 10px; /* Positions near the bottom */
+  right: 15px; /* Positions near the right */
+}
